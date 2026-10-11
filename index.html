@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Firas | Creative Portfolio</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #111111;
+            color: #f5f5f5;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            border-bottom: 1px solid #303030;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #aaaaaa;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* HEADER / HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 80px 10%;
+        }
+
+        /* FOTO PROFIL */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            border: 2px solid #555555;
+            margin-bottom: 28px;
+        }
+
+        .hero small {
+            color: #999999;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(43px, 8vw, 85px);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: #888888;
+        }
+
+        .hero p {
+            max-width: 560px;
+            color: #aaaaaa;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            padding: 11px 24px;
+            border: 1px solid #eeeeee;
+            color: #ffffff;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffffff;
+            color: #111111;
+        }
+
+        /* GENERAL SECTION */
+        section {
+            padding: 90px 10%;
+        }
+
+        .section-label {
+            color: #888888;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            line-height: 1.3;
+            margin-bottom: 25px;
+        }
+
+        /* ABOUT ME */
+        .about p.description {
+            max-width: 700px;
+            color: #aaaaaa;
+            font-size: 15px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .skills span {
+            border: 1px solid #444444;
+            padding: 7px 14px;
+            color: #cccccc;
+            font-size: 12px;
+        }
+
+        /* PORTFOLIO */
+        .works {
+            background: #191919;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .project {
+            background: #222222;
+            overflow: hidden;
+        }
+
+        .project img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .project:hover img {
+            transform: scale(1.04);
+        }
+
+        .project-info {
+            padding: 18px;
+        }
+
+        .project-info h3 {
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .project-info p {
+            color: #999999;
+            font-size: 12px;
+        }
+
+        /* CONTACT */
+        .contact p.description {
+            color: #aaaaaa;
+            max-width: 500px;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 25px 10%;
+            border-top: 1px solid #303030;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            color: #777777;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE HP */
+        @media (max-width: 600px) {
+            nav {
+                padding: 18px 6%;
+            }
+
+            .logo {
+                font-size: 14px;
+            }
+
+            nav .nav-links {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding: 60px 7%;
+            }
+
+            .profile-photo {
+                width: 125px;
+                height: 125px;
+            }
+
+            .hero small {
+                font-size: 9px;
+                letter-spacing: 2px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 65px 7%;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .project img {
+                height: 250px;
+            }
+
+            footer {
+                padding: 22px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">PORTFOLIO.</div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#works">Works</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HEADER / INTRODUCTION -->
+    <header class="hero">
+
+        <!-- GANTI DENGAN FOTO PROFIL KAMU -->
+        <img
+            src="Firas Edit.png"
+            alt="Foto profil Firas"
+            class="profile-photo"
+        >
+
+        <small>
+            PHOTOGRAPHY / VIDEOGRAPHY / DESIGN
+        </small>
+
+        <h1>
+            Hello, I'm<br>
+            <span>Firas.</span>
+        </h1>
+
+        <p>
+            I'm a student at MAK Unggulan Informatika,
+            majoring in Visual Communication Design (DKV).
+            I'm passionate about photography, videography,
+            and graphic design, with a strong interest
+            in visual storytelling.
+        </p>
+
+        <a href="#works" class="btn">
+            Explore My Works ↗
+        </a>
+
+    </header>
+
+    <!-- ABOUT ME -->
+    <section class="about" id="about">
+
+        <p class="section-label">
+            01 / ABOUT ME
+        </p>
+
+        <h2 class="section-title">
+            A little about me.
+        </h2>
+
+        <p class="description">
+            I'm a student and beginner visual creator
+            who enjoys exploring photography, videography,
+            and graphic design.
+
+            <br><br>
+
+            I'm currently developing my creative skills,
+            experimenting with different visual styles,
+            and learning how to tell stories through images
+            and videos.
+
+            <br><br>
+
+            This portfolio is a collection of my work,
+            creative experiments, and progress as I continue
+            my journey in the creative industry.
+        </p>
+
+        <div class="skills">
+            <span>Photography</span>
+            <span>Videography</span>
+            <span>Graphic Design</span>
+            <span>Visual Storytelling</span>
+            <span>Video Editing</span>
+        </div>
+
+    </section>
+
+    <!-- SELECTED WORKS -->
+    <section class="works" id="works">
+
+        <p class="section-label">
+            02 / SELECTED WORKS
+        </p>
+
+        <h2 class="section-title">
+            Things I've created.
+        </h2>
+
+        <div class="gallery">
+
+            <!-- PROJECT 1 -->
+            <article class="project">
+                <img
+                    src="Webseite My (1).jpeg"
+                    alt="City photography"
+                    loading="lazy"
+                >
+
+                <div class="project-info">
+                    <h3>Jakarta</h3>
+                    <p>Street Photography / 2026</p>
+                </div>
+            </article>
+
+            <!-- PROJECT 2 -->
+            <article class="project">
+                <img
+                    src="Webseite My (2).jpeg"
+                    alt="City photography"
+                    loading="lazy"
+                >
+
+                <div class="project-info">
+                    <h3>Jakarta</h3>
+                    <p>Street Photography / 2026</p>
+                </div>
+            </article>
+
+            <!-- PROJECT 3 -->
+            <article class="project">
+                <img
+                    src="Webseite My (3).jpeg"
+                    alt="Street Photography"
+                    loading="lazy"
+                >
+
+                <div class="project-info">
+                    <h3>Kartini Day 2026</h3>
+                    <p>Street Photography / 2026</p>
+                </div>
+            </article>
+
+            <!-- PROJECT 4 -->
+            <article class="project">
+                <img
+                    src="WhatsApp Image 2026-10-11 at 5.16.00 PM.jpeg"
+                    alt="Street Photography"
+                    loading="lazy"
+                >
+
+                <div class="project-info">
+                    <h3>Kartini Day 2026</h3>
+                    <p>Street Photography / 2026</p>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <p class="section-label">
+            03 / CONTACT
+        </p>
+
+        <h2 class="section-title">
+            Let's create something.
+        </h2>
+
+        <p class="description">
+            Have a project or want to collaborate?
+            Feel free to contact me.
+        </p>
+
+        <a
+            href="https://wa.me/6285283977449"
+            class="btn"
+        >
+            Get in Touch ↗
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Firas — Personal Portfolio</p>
+        <p>Made with curiosity and creativity.</p>
+    </footer>
+
+</body>
+</html>
